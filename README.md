@@ -14,7 +14,7 @@ Version: 0.1.0
 
 Install?(1,2,3 is optionnal)
 ----------------------------
-1.Open the file db.py, set the config DBPATH(default:$HOME) and DBNAME(default:.pwmanager.sqlite)
+1.Open the file db.py, set the config DBPATH(default:$HOME) and DBNAME(default:.pwmanager.sqlite)<br />
 2.Open the file create.py, set the config PWLENGTH(default:12) and PWKEYS(default:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&;*,.)<br />
 3.Open the file install.sh, set the config INSTALL_DIR
 4.Run the script install.sh
