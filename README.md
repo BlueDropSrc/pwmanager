@@ -25,15 +25,15 @@ There are three commands:createpw, getpw, setpw
 1.createpw 
 create a password and store it with the domain.
 After that, it copy the password created to clipboard.
-Usage:	createpw -d domain
+Usage:	createpw -d domain [-n name]
 2.getpw
-Get the password of the domain you gave, or all in the database.
-Usage:	getpw [-n] -d domain
+Get the password of the name in the domain you gave, or all in the database.
+Usage:	getpw [-n name] -d domain
 	getpw -a
 
 -a		print all password.
--d domain	print the password of domain.
--n		no print.
+-d domain	print the password in the domain.
+-n		print the password of the name.
 3.setpw
-set the password of the domain you gave.
-Usage:	setpw -d domain -p password
+set the password of the name in  the domain you gave.
+Usage:	setpw -d domain [-n name]-p password

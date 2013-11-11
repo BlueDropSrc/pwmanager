@@ -15,8 +15,8 @@ def createpw():
 
 def printUsage():
 	print '''
-Usage:	createpw -d domain
-create a password and store it with the domain.
+Usage:	createpw -d domain [-n name]
+create a password and store it with the domain and the name.
 	'''
 
 def main():
@@ -25,14 +25,16 @@ def main():
 	)
 
 	parser.add_argument('-d', action='store', dest='domain')
+	parser.add_argument('-n', action='store', dest='name')
 	args = parser.parse_args()
 
 	domain = args.domain
+	name = args.name
 	if(domain == None):
 		printUsage()
 		return
 	db.getDB()
-	if db.isExist(domain):
+	if db.isExist(domain) and name==None:
 		print 'The domain '+ domain + ' is exist, please use setpw or getpw.'
 		return
 
@@ -43,8 +45,11 @@ def main():
 		isOK =raw_input('Is it OK?(yes/no):(yes)')
 		if isOK == '' or isOK == 'yes':
 			nextpw = False
-			db.insertpw(domain, pw)
-			print domain + ' : ' + pw + ' is inserted.'
+			db.insertpw(domain, name, pw)
+			if name==None:
+				print domain + ' : ' + pw + ' is inserted.'
+			else:
+				print domain + "|" + name + ' : ' + pw + " is inseted."
 			pyperclip.setcb(pw)
 			print 'the password is copyed to clipboard.' 
 
