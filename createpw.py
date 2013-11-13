@@ -34,7 +34,7 @@ def main():
 		printUsage()
 		return
 	db.getDB()
-	if db.isExist(domain) and name==None:
+	if db.isExist(domain, name):
 		print 'The domain '+ domain + ' is exist, please use setpw or getpw.'
 		return
 

@@ -9,7 +9,7 @@ def getDB():
 	DB = sqlite3.connect(DBPATH + '/' +  DBNAME)
 	CU = DB.cursor()
 	try:
-		CU.execute('create table account(id integer primary key,domain varchar(20) UNIQUE,name varchar(20), password varchar(20))')
+		CU.execute('create table account(id integer primary key,domain varchar(20),name varchar(20), password varchar(20))')
 	except: 1 == 1
 
 def isExist(domain, name):
