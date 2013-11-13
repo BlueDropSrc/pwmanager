@@ -2,7 +2,7 @@ import sys,argparse,pyperclip,random,os
 import db
 
 PWLENTH = 12
-PWKEYS = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*;,.'
+PWKEYS = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*;,.'
 
 
 def createpw():
