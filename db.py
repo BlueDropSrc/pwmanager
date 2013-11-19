@@ -43,6 +43,6 @@ def setpw(domain, name, password):
 	if name==None:
 		CU.execute("update account set password=? where domain=?", (password, domain))
 	else:
-		CU.execute("update account set password=? and name=? where domain=?", (password, name, domain))
+		CU.execute("update account set password=? where name=? and domain=?", (password, name, domain))
 		
 	DB.commit()
